@@ -4,6 +4,10 @@
 
 This repository provides a framework to model Large Language Models on dedicated, single-core accelerators and facilitates early identification of energy bottlenecks within the hardware architecture. It is built upon the [ZigZag](https://github.com/KULeuven-MICAS/zigzag/tree/master) Design Space Exploration tool and inherits its hardware definition format.
 
+> **Energy Cost Modelling for Optimizing Large Language Model Inference on Hardware Accelerators**\
+> Robin Geens, Man Shi, Arne Symons, Chao Fang, Marian Verhelst\
+> Paper: https://ieeexplore.ieee.org/document/10737844
+
 ## Getting started
 ```
 $ python3 -m venv env
