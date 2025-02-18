@@ -1,5 +1,5 @@
 """
-Run different quantization schemes
+Run different quantization schemes. Used for Figure 6 in the paper.
 """
 
 import itertools

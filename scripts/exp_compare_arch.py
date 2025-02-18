@@ -1,5 +1,5 @@
 """
-Make plots to compare different architectures on the same models
+Make plots to compare different architectures on the same models. Used for Figue 7 in the paper.
 """
 
 import itertools

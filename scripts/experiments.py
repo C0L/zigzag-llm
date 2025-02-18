@@ -1,5 +1,6 @@
 """
-Evaluate a range of models with different accelerators, quantization schemes, batch sizes, ...
+Evaluate a range of models with different accelerators, quantization schemes, batch sizes, ... Used for Figure 5 in the
+paper.
 """
 
 import itertools

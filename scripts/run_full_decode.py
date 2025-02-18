@@ -1,5 +1,6 @@
 """
-Simulate the decoding phase by evaluating each token separately in the sequence from L/2 to L.
+Simulate the decoding phase by evaluating each token separately in the sequence from L/2 to L. Used to validate the
+approach described in the paper.
 """
 
 import json
@@ -16,7 +17,6 @@ from src.util import Stage, get_accelerator_path
 
 model = LLAMA_1_7B
 quant = W8A8
-# workload_path = "inputs/workload/matmul.yaml"
 accelerator = "generic_array_16b"
 mapping_path = "inputs/mapping/weight_st_256.yaml"
 pickle_filename = "outputs/TPU-cmes.pickle"
@@ -44,7 +44,7 @@ def run_experiment():
                 pickle_filename=pickle_filename,
                 nb_spatial_mappings_generated=1,
             )
-        except:
+        except Exception:
             continue
 
 
@@ -64,7 +64,7 @@ def make_gif():
 
 
 if __name__ == "__main__":
-    # run_experiment()
+    run_experiment()
 
     result_list = [
         f"outputs/full_decode/{model.name}_{quant.name}_decode={idx}/overall_simple.json" for idx in range(1025, 2048)
