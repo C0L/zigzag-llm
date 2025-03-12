@@ -231,6 +231,7 @@ def plot_energy_and_latency(
     p = BarPlotterSubfigures([energy_plotter, latency_plotter], subplot_cols=2, width_ratios=[3, 1], title=title)
     p.plot([energy_data, latency_data], filename)
 
+    return latency_data, energy_data
 
 def plot_energy_and_latency_minimal(cmes_all: list[list[CME_T]], groups: list[str], title: str, filename: str):
     assert all([len(cmes) == 5 for cmes in cmes_all]), "Are these the CMEs from `LAYERS_TO_PLOT`?"
@@ -277,3 +278,5 @@ def plot_energy_and_latency_minimal(cmes_all: list[list[CME_T]], groups: list[st
 
     p = BarPlotterSubfigures([energy_plotter, latency_plotter], subplot_cols=2, width_ratios=[1, 1], title=title)
     p.plot([energy_data, latency_data], filename)
+
+
